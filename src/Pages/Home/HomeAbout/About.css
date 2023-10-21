@@ -1,0 +1,34 @@
+.about{
+    position: relative;
+}
+.about::after{
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 130px;
+    background: #e54b4b;
+    border: 1px solid #e54b4b;
+}
+.expertise::after{
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 130px;
+    background: #e54b4b;
+    border: 1px solid #e54b4b;
+    opacity: 0;
+    transform: scaleY(2);
+    transition: 1s;
+}
+.expertise:hover:after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+/* }.about::after{
+    content: " ";
+ 
+    position: absolute;
+    width: 5px;
+    height: 40px;
+    background: brown;
+} */
