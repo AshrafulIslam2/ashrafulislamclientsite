@@ -6,7 +6,7 @@ import Navbar from "../SharedComponent/Header/Navbar";
 const Main = () => {
   return (
     <div className="bg-black">
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       <Outlet></Outlet>
       <Footer></Footer>
     </div>

@@ -1,20 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { GoHome, GoMortarBoard } from "react-icons/go";
-import { GiPortal, GiNewspaper } from "react-icons/gi";
-import { GrContactInfo } from "react-icons/gr";
 const Navbar = () => {
   const items = [
-    { name: "Home", ref: "/home", icon: <GoHome></GoHome> },
-    { name: "About", ref: "/about", icon: <GoMortarBoard></GoMortarBoard> },
-    { name: "Portfolio", ref: "/portfolio", icon: <GiPortal></GiPortal> },
-    { name: "News", ref: "/news", icon: <GiNewspaper></GiNewspaper> },
-    { name: "Contact", ref: "/contact", icon: <GrContactInfo></GrContactInfo> },
+    { name: "Home", ref: "/home" },
+    { name: "About", ref: "/about" },
+    { name: "Portfolio", ref: "/portfolio" },
+    { name: "News", ref: "/news" },
+    { name: "Contact", ref: "/contact" },
   ];
   return (
     <div>
-      <header className="py-6 ">
-        <nav className="flex justify-between">
+      <header className="">
+        <nav className="flex sm:justify-between p-4 sm:p-4">
           <div>
             <img
               src="https://i.ibb.co/W3nxn17/myLoog.png"
@@ -23,13 +20,13 @@ const Navbar = () => {
               srcset=""
             />
           </div>
-          <div className="sm:hidde md:visible lg:visible">
+          <div className="flex  justify-center items-center">
             {items.map((item) => (
               <Link
-                className=" ml-4 hover:text-[#e54b4b] inline-flex items-center font-semibold font-sans"
+                className=" flex  justify-center  items-center text-[10px] sm:text-base ml-4 hover:text-[#e54b4b]  font-semibold font-sans"
                 to={`${item.ref}`}
               >
-                {item.icon} {item.name}
+                {item.name}
               </Link>
             ))}
           </div>
