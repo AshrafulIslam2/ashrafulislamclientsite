@@ -1,6 +1,6 @@
 import React from "react";
 import ashraful from "../../../Assets/ash001.png";
-import { easeInOut, motion, spring } from "framer-motion";
+import { easeInOut, easeOut, motion, spring } from "framer-motion";
 
 import "./Banner.css";
 
@@ -25,35 +25,35 @@ const HomeBanner = () => {
       >
         <motion.h1
           className="text-base text-left  font-extrabold tracking-widest leading-loose mt-6  text-white"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 5 }}
+          initial={{ opacity: 0, translateY: "-100%" }}
+          whileInView={{ translateY: "0%", opacity: 1 }}
+          transition={{ duration: 2 }}
         >
           Hello I AM,
         </motion.h1>
         <div className="text-center uppercase text-[30px] sm:text-[70px] md:text-[40px] lg:text-[55px] xl:text-[60px]  font-sans font-bold  flex  text-white">
           <motion.h1
-            initial={{ x: "-100vw", opacity: 0 }}
+            initial={{ x: "-100vw" }}
             animate={{ x: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 5 }}
+            whileInView={{}}
+            transition={{ duration: 2 }}
           >
             Ashraful Islam
           </motion.h1>
         </div>
         <motion.p
           className="position   text-[20px] lg:text-[30px]  uppercase  text-white  font-sans font-semibold "
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          transition={{ duration: 4, delay: 2 }}
+          initial={{ opacity: 0, translateY: "-100%" }}
+          animate={{ opacity: 1, translateY: "0%" }}
+          transition={{ duration: 3, delay: 2 }}
         >
           FRONT-END DEVELOPER
         </motion.p>
         <motion.p
           className="text-white    font-thin font-mono tracking-widest"
-          initial={{ scale: 0, opacity: 0 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 3, delay: 4 }}
+          initial={{ opacity: 0, translateY: "-100%" }}
+          whileInView={{ opacity: 1, translateY: "0%" }}
+          transition={{ duration: 3, delay: 2 }}
         >
           Passionate about learning new skills, and Ready to take any challenge
           of any level.
@@ -72,10 +72,10 @@ const HomeBanner = () => {
       </motion.div>
       <motion.div
         className=" order-1 sm:order-2 "
-        initial={{ x: "100vw", opacity: 0 }}
-        animate={{ x: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 5 }}
+        transition={{ duration: 10 }}
       >
         <img
           src={ashraful}
