@@ -13,7 +13,7 @@ const ParalexScroll = () => {
   const { scrollYProgress } = useScroll({
     target: Refs,
 
-    offset: ["0 2", "1 2"],
+    offset: ["0 1", "0 0"],
   });
 
   return (
