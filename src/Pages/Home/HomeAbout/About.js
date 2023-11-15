@@ -100,7 +100,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <motion.div
+      {/* <motion.div
         ref={Refs}
         style={{ scale: scrollYProgress, opacity: scrollYProgress }}
         className="overflow-hidden"
@@ -123,7 +123,7 @@ const About = () => {
             alt="shikka.xyz"
           />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
