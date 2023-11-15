@@ -1,13 +1,15 @@
 import React, { useRef } from "react";
 import "./About.css";
 import { AiFillCaretRight } from "react-icons/ai";
-import { motion, useScroll } from "framer-motion";
+import project1 from "../../../Assets/shikka.png";
+import { motion, useScroll, useTransform } from "framer-motion";
 const About = () => {
   const Refs = useRef(null);
   const { scrollYProgress } = useScroll({
     target: Refs,
-    offset: ["0 6", "0 0"],
+    offset: ["0 1", "1.33 1"],
   });
+
   return (
     <div>
       <div className="md:flex lg:flex  p-[16px]">
@@ -98,11 +100,29 @@ const About = () => {
           </p>
         </div>
       </div>
-      <motion.div ref={Refs} style={{ scale: scrollYProgress }}>
-        <motion.div className="w-[1152px] h-[600px] bg-white rounded-lg mb-[40px] "></motion.div>
-        <motion.div className="w-[1152px] h-[600px] bg-white rounded-lg mb-[40px] "></motion.div>
-        <motion.div className="w-[1152px] h-[600px] bg-white rounded-lg mb-[40px] "></motion.div>
-        <motion.div className="w-[1152px] h-[600px] bg-white rounded-lg mb-[40px]"></motion.div>
+      <motion.div
+        ref={Refs}
+        style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+        className="overflow-hidden"
+      >
+        <motion.div className="w-[1152px] grid grid-cols-2 items-center bg-white rounded-lg mb-[40px] overflow-hidden ">
+          <div className="m-[40px]">
+            <h1 className="text-black text-[20px]">
+              <span className="font-bold text-2xl">Shikkha.xyz</span>
+            </h1>
+            <p className="text-black text-lg text-justify my-[10px]">
+              One-stop skill development platform that brings variety of live
+              and pre-recorded courses in Bangla through which workforce can
+              become skilled developing their technical and soft skills.
+            </p>
+          </div>
+
+          <img
+            src={project1}
+            className="rounded-lt-xl shadow-2xl shadow-black h-[459px] mt-[40px]  object-cover "
+            alt="shikka.xyz"
+          />
+        </motion.div>
       </motion.div>
     </div>
   );
