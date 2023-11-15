@@ -1,12 +1,12 @@
 import React from "react";
 import ashraful from "../../../Assets/ash001.png";
-import { easeInOut, easeOut, motion, spring } from "framer-motion";
+import { motion } from "framer-motion";
 
 import "./Banner.css";
 
 const HomeBanner = () => {
   return (
-    <header className="md:grid md:grid-cols-2  justify-items-center  items-center rounded-lg p-[16px]  gap-4 ">
+    <header className="md:grid md:grid-cols-2   justify-items-center  items-center rounded-lg p-[16px]  gap-4 ">
       {/* this i a image div for banner  */}
       <motion.div
         className="flex flex-col w-full    order-2 sm:order-1 "

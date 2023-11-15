@@ -5,7 +5,7 @@ import ParalexScroll from "./ParalexScroll/ParalexScroll";
 
 const Home = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black ">
       <HomeBanner></HomeBanner>
       <About></About>
       <ParalexScroll></ParalexScroll>
